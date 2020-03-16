@@ -8,7 +8,7 @@ module.exports = {
   entry: "./src/index.js", // entry 는 src의 index.js
 
   output: {
-    path: path.resolve(__dirname, "./"), // 번들링된 파일 /build에 생성
+    path: path.resolve(__dirname, "./"), // 번들링된 파일 루트에 생성
     filename: "bundle.js"
   },
 
@@ -36,8 +36,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: `./index.html`,
-      filename: "index.html"
+      template: `./public/index.html`,
+      filename: path.join(__dirname, "./index.html")
     }),
     new MiniCssExtractPlugin({
       filename: "style.css"
