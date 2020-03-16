@@ -1,0 +1,23 @@
+{
+  "name": "hsl0505.github.io",
+  "version": "1.0.0",
+  "description": "my portfolio web site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsl0505/hsl0505.github.io.git"
+  },
+  "author": "hyunsung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hsl0505/hsl0505.github.io/issues"
+  },
+  "homepage": "https://github.com/hsl0505/hsl0505.github.io#readme",
+  "dependencies": {
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  }
+}
