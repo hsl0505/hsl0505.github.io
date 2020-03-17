@@ -1,3 +1,41 @@
+@import "reset.css";
+
+* {
+  box-sizing: border-box;
+}
+
 body {
+  background-color: white;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.Navbar {
+  position: fixed;
+  right: 5%;
+  top: 2%;
+}
+
+.Home {
   background-color: red;
+  height: 500px;
+}
+
+.AboutMe {
+  background-color: blue;
+  height: 500px;
+}
+
+.Project {
+  background-color: green;
+  height: 500px;
+}
+
+.Contact {
+  background-color: coral;
+  height: 500px;
 }
