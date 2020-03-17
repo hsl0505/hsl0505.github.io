@@ -3,13 +3,13 @@ module.exports = function(api) {
 
   const presets = [
     [
-      "@babel/preset-env",
-      {
-        useBuiltIns: "usage",
-        corejs: {
-          version: 2
-        }
-      }
+      "@babel/preset-env"
+      // {
+      //   useBuiltIns: "usage",
+      //   corejs: {
+      //     version: 2
+      //   }
+      // }
     ],
     "@babel/preset-react"
   ];
