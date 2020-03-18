@@ -16,10 +16,11 @@ function Navbar() {
       <ButtonGroup
         size="large"
         orientation={scroll > 100 ? "vertical" : "horizontal"}
+        variant="text"
       >
         <Button>Home</Button>
-        <Button>About Me</Button>
-        <Button>Home</Button>
+        <Button>About</Button>
+        <Button>Skills</Button>
         <Button>Project</Button>
         <Button>Contact</Button>
       </ButtonGroup>
