@@ -9,7 +9,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, "./"), // 번들링된 파일 루트에 생성
-    filename: "bundle.js"
+    filename: "bundle.js",
   },
 
   module: {
@@ -17,38 +17,38 @@ module.exports = {
       {
         test: /\.js?$/,
         loader: "babel-loader", // 로더를 이용해 바벨을 적용
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.html$/,
         use: [
           {
             loader: "html-loader", // 로더를 이용해 html 적용
-            options: { minimize: true }
-          }
-        ]
+            options: { minimize: true },
+          },
+        ],
       },
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"]
-      }
-    ]
+        test: /\.scss$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: `./public/index.html`,
-      filename: path.join(__dirname, "./index.html")
+      filename: path.join(__dirname, "./index.html"),
     }),
     new MiniCssExtractPlugin({
-      filename: "style.css"
-    })
+      filename: "style.css",
+    }),
   ],
   optimization: {
-    minimize: true
+    minimize: true,
   },
   devServer: {
     contentBase: path.join(__dirname, "./"), // 이 경로에 있는 파일이 변경될 때 번들을 다시 컴파일
     compress: true,
-    port: 3002
-  }
+    port: 3002,
+  },
 };
