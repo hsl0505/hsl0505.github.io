@@ -1,0 +1,29 @@
+.AboutMe {
+  display: flex;
+  width: 100%;
+  margin-top: 2rem;
+  .AboutMe_branch {
+    padding-left: 0.5%;
+    display: flex;
+    width: 15%;
+    margin-left: 3%;
+    .master {
+      width: 30%;
+      .Circle {
+        margin-left: 12%;
+      }
+      .Arrow {
+        margin-top: -0.3rem;
+        margin-left: 18%;
+      }
+    }
+
+    .FeatureArrow {
+      width: 70%;
+    }
+  }
+  .AboutMe_content {
+    width: 82%;
+    padding-left: 1%;
+  }
+}

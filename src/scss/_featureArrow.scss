@@ -1,0 +1,48 @@
+.FeatureArrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .right {
+    display: flex;
+    margin-top: 0.8rem;
+    margin-left: -0.9rem;
+    .right_line {
+      height: 0;
+      width: 10.5rem;
+      border-top: 0.5rem solid transparent;
+      border-bottom: 0.5rem solid transparent;
+      background-color: #0174df;
+      margin-top: 0.5rem;
+    }
+    .right_arrow {
+      width: 0;
+      height: 0;
+      border-top: 1rem solid transparent;
+      border-bottom: 1rem solid transparent;
+      border-left: 1.5rem solid #0174df;
+    }
+  }
+
+  .left {
+    display: flex;
+    width: 120%;
+    transform: rotate(180deg);
+    margin-bottom: 5rem;
+    margin-left: -2.9rem;
+    .left_line {
+      height: 0;
+      width: 87%;
+      border-top: 0.5rem solid transparent;
+      border-bottom: 0.5rem solid transparent;
+      background-color: #848484;
+      margin-top: 0.5rem;
+    }
+    .left_arrow {
+      width: 0;
+      height: 0;
+      border-top: 1rem solid transparent;
+      border-bottom: 1rem solid transparent;
+      border-left: 1.5rem solid #848484;
+    }
+  }
+}
