@@ -5,7 +5,7 @@
   .AboutMe_branch {
     padding-left: 0.5%;
     display: flex;
-    width: 15%;
+    width: 12%;
     margin-left: 3%;
     .master {
       width: 30%;
@@ -14,7 +14,7 @@
       }
       .Arrow {
         margin-top: -0.3rem;
-        margin-left: 18%;
+        margin-left: 16.5%;
       }
     }
 
@@ -23,7 +23,49 @@
     }
   }
   .AboutMe_content {
-    width: 82%;
-    padding-left: 1%;
+    width: 88%;
+    display: flex;
+    .Circle {
+      border: 0.7rem solid #0174df;
+    }
+    .Arrow {
+      margin-left: 0.8rem;
+      margin-top: -0.2rem;
+      .arrow_line {
+        margin-left: 0.5rem;
+        height: 15rem;
+        border-left: 0.5rem solid transparent;
+        border-right: 0.5rem solid transparent;
+        background-color: #0174df;
+      }
+      .arrow {
+        border-left: 1rem solid transparent;
+        border-right: 1rem solid transparent;
+        border-top: 1.5rem solid #0174df;
+      }
+    }
+
+    .content {
+      margin-left: 2%;
+      .content_title {
+        margin-top: 0.5rem;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .content_box {
+        margin-top: 3rem;
+        display: flex;
+        .content_img {
+          height: 11rem;
+          width: 11rem;
+          border-radius: 5.5rem;
+        }
+        .content_text {
+          margin-left: 2rem;
+          font-size: 1.2rem;
+          line-height: 2.5rem;
+        }
+      }
+    }
   }
 }
