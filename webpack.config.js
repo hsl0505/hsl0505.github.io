@@ -48,7 +48,7 @@ module.exports = {
       filename: path.join(__dirname, "./index.html"),
     }),
     new MiniCssExtractPlugin({
-      filename: "style.css",
+      filename: "style.scss",
     }),
   ],
   optimization: {
