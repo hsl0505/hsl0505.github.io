@@ -1,8 +1,10 @@
-.AboutMe {
+.AboutMe,
+.MySkills {
   display: flex;
   width: 100%;
   margin-top: 2rem;
-  .AboutMe_branch {
+  .AboutMe_branch,
+  .MySkills_branch {
     padding-left: 0.5%;
     display: flex;
     width: 12%;
@@ -22,7 +24,8 @@
       width: 70%;
     }
   }
-  .AboutMe_content {
+  .AboutMe_content,
+  .MySkills_content {
     width: 88%;
     display: flex;
     .Circle {

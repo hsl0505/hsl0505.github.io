@@ -4,6 +4,7 @@
 @import "./aboutMe";
 @import "./arrow";
 @import "./featureArrow";
+@import "./mySkills";
 
 * {
   box-sizing: border-box;
@@ -49,6 +50,8 @@ body,
     flex-direction: column;
     margin-top: -1rem;
     font-size: 1rem;
+    opacity: 0;
+    animation: fadeIn 1.5s 3s 1 forwards;
     .contact_list {
       display: flex;
       align-items: center;
