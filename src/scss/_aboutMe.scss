@@ -13,6 +13,15 @@
       width: 30%;
       .Circle {
         margin-left: 12%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .inner_circle {
+          height: 1.5rem;
+          width: 1.5rem;
+          border-radius: 0.75rem;
+          background-color: #0174df;
+        }
       }
       .Arrow {
         margin-top: -0.3rem;
@@ -69,6 +78,71 @@
           line-height: 2.5rem;
         }
       }
+    }
+  }
+}
+
+@keyframes aboutMeContent {
+  from {
+    transform: translateX(20rem);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes arrowline {
+  from {
+    height: 0;
+  }
+  to {
+    height: 25rem;
+  }
+}
+
+@keyframes arrow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes featureArrowRight {
+  from {
+    width: 0;
+  }
+  to {
+    width: 7.5rem;
+  }
+}
+
+.AboutMe {
+  .AboutMe_branch {
+    .master {
+      .Arrow {
+        .arrow_line {
+          height: 0;
+          animation: arrowline 1.5s 4.5s 1 forwards;
+        }
+        .arrow {
+          opacity: 0;
+          animation: arrow 0.1s 4.5s 1 forwards;
+        }
+      }
+    }
+    .FeatureArrow {
+      .right {
+        .right_line {
+          animation: featureArrowRight 1.5s 6s 1 forwards;
+        }
+      }
+    }
+  }
+  .AboutMe_content {
+    .content {
+      animation: aboutMeContent 1.5s 6s 1 forwards;
     }
   }
 }

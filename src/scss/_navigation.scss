@@ -1,0 +1,54 @@
+nav {
+  height: 6%;
+  background-color: #55565a;
+  border-bottom: 4px solid #0b615e;
+  .Navigation {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 20px;
+    color: white;
+    li {
+      cursor: pointer;
+    }
+    .temp {
+      color: #fe2e64;
+    }
+    i {
+      display: none;
+    }
+  }
+}
+
+// 태블릿
+@media all and (max-width: 1279px) and (min-width: 1024px) {
+}
+
+@media all and (max-width: 1023px) and (min-width: 768px) {
+}
+
+// 중간
+@media all and (max-width: 767px) and (min-width: 641px) {
+  nav {
+    .Navigation {
+      width: 95%;
+      justify-content: flex-end;
+      li {
+        display: none;
+      }
+      i {
+        cursor: pointer;
+        display: block;
+      }
+    }
+  }
+}
+
+// 모바일
+@media all and (max-width: 640px) and (min-width: 400px) {
+}
+
+@media all and (max-width: 399px) and (min-width: 320px) {
+}
