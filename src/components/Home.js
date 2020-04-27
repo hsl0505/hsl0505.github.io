@@ -3,36 +3,13 @@ import React from "react";
 function Home() {
   return (
     <div className="Home">
-      <div className="Home_text">
-        <div className="Home_t1">안녕하세요</div>
-        <div className="Home_t2">임현성의 포트폴리오 입니다 :)</div>
+      <div className="Home_t1">
+        Hello, I'm <span>Hyunsung Lim. </span>
       </div>
-      <div className="contact">
-        <div className="contact_list">
-          <i className="fas fa-phone fa-2x"></i>
-          <span>010-9309-1797</span>
-        </div>
-        <div className="contact_list">
-          <i className="far fa-envelope fa-2x"></i>
-          <span>hslgood@gmail.com</span>
-        </div>
-        <div className="contact_list">
-          <a href="https://github.com/hsl0505" target="top">
-            <i className="fab fa-github fa-2x contact_link"></i>
-          </a>
-          <a href="https://github.com/hsl0505" target="top">
-            <span>https://github.com/hsl0505</span>​
-          </a>
-        </div>
-        <div className="contact_list">
-          <a href="https://hsl1697.tistory.com" target="top">
-            <i className="fas fa-blog fa-2x contact_link"></i>
-          </a>
-          <a href="https://hsl1697.tistory.com" target="top">
-            <span>https://hsl1697.tistory.com</span>
-          </a>
-        </div>
+      <div className="Home_t2">
+        <span>임현성</span> 의 <span className="sp2">포트폴리오</span> 입니다 :)
       </div>
+      <button className="Home_btn">안녕</button>
     </div>
   );
 }
