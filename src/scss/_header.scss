@@ -133,4 +133,10 @@ header {
     min-width: 320px;
     font-size: 7px;
   }
+  @include moveHomAni(12vh, moveHomeDown5);
+  header {
+    .Home {
+      animation: moveHomeDown5 1s forwards;
+    }
+  }
 }

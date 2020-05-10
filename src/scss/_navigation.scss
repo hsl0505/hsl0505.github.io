@@ -20,6 +20,18 @@ nav {
       display: none;
     }
   }
+  .NavigationDropMenu {
+    display: none;
+  }
+}
+
+@keyframes navAnimation {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 // 태블릿
@@ -41,6 +53,31 @@ nav {
       i {
         cursor: pointer;
         display: block;
+        font-size: 27px;
+      }
+    }
+    .NavigationDropMenu {
+      position: relative;
+      display: block;
+      z-index: 1;
+      margin-top: 4px;
+      height: 100%;
+      li {
+        display: flex;
+        align-items: center;
+        background-color: #55565a;
+        border-bottom: 1px solid #424242;
+        height: 100%;
+        font-size: 15px;
+        color: white;
+
+        div {
+          margin-left: 20px;
+          cursor: pointer;
+        }
+        .temp {
+          color: #fe2e64;
+        }
       }
     }
   }
@@ -48,7 +85,79 @@ nav {
 
 // 모바일
 @media all and (max-width: 640px) and (min-width: 400px) {
+  nav {
+    .Navigation {
+      width: 95%;
+      justify-content: flex-end;
+      li {
+        display: none;
+      }
+      i {
+        cursor: pointer;
+        display: block;
+        font-size: 27px;
+      }
+    }
+    .NavigationDropMenu {
+      display: block;
+      margin-top: 4px;
+      height: 100%;
+      li {
+        display: flex;
+        align-items: center;
+        background-color: #55565a;
+        border-bottom: 1px solid #424242;
+        height: 100%;
+        font-size: 15px;
+        color: white;
+
+        div {
+          margin-left: 20px;
+          cursor: pointer;
+        }
+        .temp {
+          color: #fe2e64;
+        }
+      }
+    }
+  }
 }
 
 @media all and (max-width: 399px) and (min-width: 320px) {
+  nav {
+    .Navigation {
+      width: 95%;
+      justify-content: flex-end;
+      li {
+        display: none;
+      }
+      i {
+        cursor: pointer;
+        display: block;
+        font-size: 27px;
+      }
+    }
+    .NavigationDropMenu {
+      display: block;
+      margin-top: 4px;
+      height: 100%;
+      li {
+        display: flex;
+        align-items: center;
+        background-color: #55565a;
+        border-bottom: 1px solid #424242;
+        height: 100%;
+        font-size: 15px;
+        color: white;
+
+        div {
+          margin-left: 20px;
+          cursor: pointer;
+        }
+        .temp {
+          color: #fe2e64;
+        }
+      }
+    }
+  }
 }
