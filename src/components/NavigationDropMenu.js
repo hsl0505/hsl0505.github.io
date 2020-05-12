@@ -14,7 +14,15 @@ export default function NavigationDropMenu(props) {
         >
           HOME
         </li>
-        <li className={curLocation === "about" ? "curLocation" : ""}>ABOUT</li>
+        <li
+          className={curLocation === "about" ? "curLocation" : ""}
+          onClick={() => {
+            moveScroll(1006, 0);
+            setShowDropMenu(false);
+          }}
+        >
+          ABOUT
+        </li>
         <li>
           <div>PROJECT</div>
         </li>
