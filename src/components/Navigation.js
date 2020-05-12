@@ -30,7 +30,12 @@ export default function Navigation() {
         >
           HOME
         </li>
-        <li className={curLocation === "about" ? "curLocation" : ""}>ABOUT</li>
+        <li
+          className={curLocation === "about" ? "curLocation" : ""}
+          onClick={() => moveScroll(1006, 0)}
+        >
+          ABOUT
+        </li>
         <li>PROJECT</li>
         <li>CONTACT</li>
         <i
