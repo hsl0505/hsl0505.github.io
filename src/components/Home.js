@@ -9,7 +9,17 @@ function Home() {
       <div className="Home_t2">
         <span>임현성</span> 의 <span className="sp2">포트폴리오</span> 입니다 :)
       </div>
-      <button className="Home_btn">안녕</button>
+      <div className="btn_wrapper">
+        <div
+          className="Home_btn"
+          onClick={() =>
+            window.scrollTo({ top: 1006, left: 0, behavior: "smooth" })
+          }
+        >
+          <div>VIEW</div>
+          <i className="fas fa-arrow-right"></i>
+        </div>
+      </div>
     </div>
   );
 }
