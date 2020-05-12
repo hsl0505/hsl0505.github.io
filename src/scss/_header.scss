@@ -35,14 +35,48 @@ header {
         color: #240b3b;
       }
     }
-
-    .Home_btn {
-      opacity: 0;
-      height: 60px;
-      width: 200px;
-      background-color: white;
-      outline: 0;
-      animation: showBtn 1s 5s forwards;
+    .btn_wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      .Home_btn {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        opacity: 0;
+        height: 60px;
+        width: 140px;
+        background-color: transparent;
+        border: 3px solid #0b615e;
+        color: #0b615e;
+        font-family: "Jua", sans-serif;
+        font-size: 25px;
+        outline: none;
+        animation: showBtn 1s 5s forwards;
+        cursor: pointer;
+      }
+      .Home_btn:hover {
+        background-color: #0b615e;
+        color: white;
+        transition-property: background-color, color;
+        transition-duration: 1s;
+        i {
+          transition: transform 1s ease;
+          transform: rotate(90deg);
+        }
+      }
+      .Home_btn:not(:hover) {
+        background-color: transparent;
+        border: 3px solid #0b615e;
+        color: #0b615e;
+        transition-property: background-color, color;
+        transition-duration: 1s;
+        i {
+          transition: transform 1s ease;
+          transform: rotate(0);
+        }
+      }
     }
   }
 }
@@ -111,6 +145,13 @@ header {
   header {
     .Home {
       animation: moveHomeDown3 1s forwards;
+      .btn_wrapper {
+        .Home_btn {
+          height: 50px;
+          width: 120px;
+          font-size: 20px;
+        }
+      }
     }
   }
 }
@@ -124,6 +165,13 @@ header {
   header {
     .Home {
       animation: moveHomeDown4 1s forwards;
+      .btn_wrapper {
+        .Home_btn {
+          height: 40px;
+          width: 100px;
+          font-size: 18px;
+        }
+      }
     }
   }
 }
@@ -137,6 +185,13 @@ header {
   header {
     .Home {
       animation: moveHomeDown5 1s forwards;
+      .btn_wrapper {
+        .Home_btn {
+          height: 40px;
+          width: 100px;
+          font-size: 18px;
+        }
+      }
     }
   }
 }

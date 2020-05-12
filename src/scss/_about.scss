@@ -2,6 +2,37 @@
   height: 130%;
   .About_title {
     height: 23.1%;
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title_text {
+      font-family: "Jua", sans-serif;
+      font-size: 3rem;
+      margin-top: 8%;
+      animation: moveAbout 1s forwards;
+      display: none;
+    }
+    .title_underline {
+      margin-top: 10px;
+      width: 3rem;
+      border-bottom: 3px solid black;
+      animation: moveAbout 1s forwards;
+      display: none;
+    }
+  }
+
+  .About_content {
+    height: 76.9%;
+  }
+}
+
+@keyframes moveAbout {
+  from {
+    opacity: 0;
+    transform: translateX(-1000px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
