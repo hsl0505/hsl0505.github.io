@@ -7,7 +7,20 @@ import About from "./About";
 function App() {
   const [showNav, setNav] = useState();
 
+  const [aboutTitleText, setAboutTitleText] = useState(false);
+  const [aboutTitleUnder, setAboutTitleUnder] = useState(false);
+
   function onScroll() {
+    console.log(document.documentElement.scrollTop);
+
+    if (!aboutTitleText && document.documentElement.scrollTop > 400) {
+      setAboutTitleText(true);
+    }
+
+    if (!aboutTitleUnder && document.documentElement.scrollTop > 420) {
+      setAboutTitleUnder(true);
+    }
+
     if (document.documentElement.scrollTop > 1004) {
       setNav(true);
     } else {
@@ -34,6 +47,7 @@ function App() {
                 animationName: "navAnimation",
                 animationDuration: "1s",
                 animationDirection: "fowards",
+                zIndex: "1",
               }
             : {}
         }
@@ -42,7 +56,10 @@ function App() {
       </nav>
       <main>
         <section className="section_about">
-          <About />
+          <About
+            aboutTitleText={aboutTitleText}
+            aboutTitleUnder={aboutTitleUnder}
+          />
         </section>
         <section className="project">플젝</section>
       </main>
