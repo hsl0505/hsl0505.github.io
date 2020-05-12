@@ -1,15 +1,20 @@
 import React, { Fragment } from "react";
 
-export default function NavigationDropMenu() {
+export default function NavigationDropMenu(props) {
+  const { curLocation, moveScroll, setShowDropMenu } = props;
   return (
     <Fragment>
       <ul className="NavigationDropMenu">
-        <li>
-          <div className="temp">HOME</div>
+        <li
+          className={curLocation === "home" ? "curLocation" : ""}
+          onClick={() => {
+            moveScroll(0, 0);
+            setShowDropMenu(false);
+          }}
+        >
+          HOME
         </li>
-        <li>
-          <div>ABOUT</div>
-        </li>
+        <li className={curLocation === "about" ? "curLocation" : ""}>ABOUT</li>
         <li>
           <div>PROJECT</div>
         </li>

@@ -1,14 +1,36 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import NavigationDropMenu from "./NavigationDropMenu";
 
 export default function Navigation() {
   const [showDropMenu, setShowDropMenu] = useState(false);
+  const [curLocation, setCurLocation] = useState("home");
+
+  function setCurLocationFunc() {
+    if (document.documentElement.scrollTop < 1004) {
+      setCurLocation("home");
+    } else if (document.documentElement.scrollTop > 1004) {
+      setCurLocation("about");
+    }
+  }
+
+  function moveScroll(top, left) {
+    window.scrollTo({ top, left, behavior: "smooth" });
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", setCurLocationFunc);
+  }, [curLocation]);
 
   return (
     <Fragment>
       <ul className="Navigation">
-        <li className="temp">HOME</li>
-        <li>ABOUT</li>
+        <li
+          className={curLocation === "home" ? "curLocation" : ""}
+          onClick={() => moveScroll(0, 0)}
+        >
+          HOME
+        </li>
+        <li className={curLocation === "about" ? "curLocation" : ""}>ABOUT</li>
         <li>PROJECT</li>
         <li>CONTACT</li>
         <i
@@ -22,7 +44,15 @@ export default function Navigation() {
           }}
         ></i>
       </ul>
-      {showDropMenu ? <NavigationDropMenu /> : <div />}
+      {showDropMenu ? (
+        <NavigationDropMenu
+          curLocation={curLocation}
+          moveScroll={moveScroll}
+          setShowDropMenu={setShowDropMenu}
+        />
+      ) : (
+        <div />
+      )}
     </Fragment>
   );
 }
