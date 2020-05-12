@@ -23,6 +23,72 @@
 
   .About_content {
     height: 76.9%;
+    .About_myVision {
+      display: flex;
+      justify-content: center;
+
+      .myVision1,
+      .myVision2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .icon_wrapper {
+          display: none;
+          align-items: center;
+          justify-content: center;
+          width: 160px;
+          height: 160px;
+          background-color: #0b615e;
+          padding: 20px;
+          animation: iconAnimation 1s forwards;
+          i {
+            color: white;
+            font-size: 100px;
+          }
+        }
+        .vision_text {
+          animation: iconText 1s forwards;
+          display: none;
+          margin-top: 20px;
+          font-weight: bold;
+          font-size: 20px;
+          span {
+            color: #0b615e;
+          }
+        }
+      }
+
+      .myVision2 {
+        margin-left: 100px;
+      }
+    }
+
+    .About_meExplain {
+      margin-top: 70px;
+      display: flex;
+      .myImg {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          width: 250px;
+          height: 250px;
+          border-radius: 125px;
+        }
+        .explainText {
+          text-align: center;
+          line-height: 35px;
+          span {
+            font-size: 30px;
+            font-weight: bold;
+            span {
+              color: #0b615e;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -34,5 +100,25 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes iconAnimation {
+  from {
+    transform: rotateY(-50deg);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes iconText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

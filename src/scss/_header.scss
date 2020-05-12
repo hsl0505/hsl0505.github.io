@@ -40,12 +40,12 @@ header {
       display: flex;
       justify-content: center;
       .Home_btn {
-        margin-top: 10px;
+        margin-top: 20px;
         display: flex;
         justify-content: space-around;
         align-items: center;
         opacity: 0;
-        height: 60px;
+        height: 50px;
         width: 140px;
         background-color: transparent;
         border: 3px solid #0b615e;
@@ -148,7 +148,7 @@ header {
       .btn_wrapper {
         .Home_btn {
           height: 50px;
-          width: 120px;
+          width: 100px;
           font-size: 20px;
         }
       }
@@ -168,7 +168,7 @@ header {
       .btn_wrapper {
         .Home_btn {
           height: 40px;
-          width: 100px;
+          width: 80px;
           font-size: 18px;
         }
       }
@@ -188,7 +188,7 @@ header {
       .btn_wrapper {
         .Home_btn {
           height: 40px;
-          width: 100px;
+          width: 80px;
           font-size: 18px;
         }
       }
