@@ -77,13 +77,133 @@
           border-radius: 125px;
         }
         .explainText {
+          margin-top: 20px;
           text-align: center;
           line-height: 35px;
-          span {
+          .explainText_title {
             font-size: 30px;
             font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
             span {
               color: #0b615e;
+            }
+          }
+          .explainText_close {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+          }
+        }
+      }
+
+      .mySkills {
+        width: 40%;
+        // background-color: red;
+        .bestSkills,
+        .experienceSkills {
+          .bestSkills_title,
+          .experienceSkills_title {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            span {
+              color: #0b615e;
+            }
+          }
+          .bestSkills_icon,
+          .experienceSkills_icon {
+            display: flex;
+            .icon_wrapper {
+              width: 100px;
+              .htmlIcon,
+              .cssIcon,
+              .jsIcon,
+              .tsIcon,
+              .reactIcon,
+              .expoIcon,
+              .nodeIcon,
+              .expressIcon,
+              .gitIcon,
+              .mysqlIcon,
+              .seqIcon,
+              .s3Icon,
+              .ec2Icon,
+              .rdsIcon {
+                width: 100px;
+                height: 100px;
+                background-image: url("../image/htmlIcon.png");
+                background-size: cover;
+                text-align: center;
+                line-height: 100px;
+              }
+              .cssIcon {
+                margin-top: 7px;
+                margin-bottom: 3px;
+                margin-left: 5px;
+                background-image: url("../image//cssIcon.png");
+                width: 90px;
+                height: 90px;
+              }
+              .jsIcon {
+                background-image: url("../image/jsIcon.png");
+                background-position: center;
+                height: 78px;
+                width: 78px;
+                margin-top: 12px;
+                margin-bottom: 10px;
+                margin-left: 11px;
+              }
+              .tsIcon {
+                background-image: url("../image/tsIcon.png");
+                background-position: center;
+                height: 84px;
+                width: 90px;
+                margin-top: 10px;
+                margin-left: 5px;
+                margin-bottom: 6px;
+              }
+              .reactIcon {
+                background-image: url("../image/reactIcon.png");
+              }
+              .expoIcon {
+                background-image: url("../image/expoIcon.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 70px;
+                width: 88px;
+                margin-top: 18px;
+                margin-left: 12px;
+                margin-bottom: 12px;
+              }
+              .nodeIcon {
+                background-image: url("../image/nodeIcon.png");
+              }
+              .expressIcon {
+                background-image: url("../image/expressIcon.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+              .gitIcon {
+                background-image: url("../image/gitIcon.png");
+              }
+              .mysqlIcon {
+                background-image: url("../image/mysqlIcon.png");
+              }
+              .seqIcon {
+                background-image: url("../image/sequelizeIcon.png");
+              }
+              .s3Icon {
+                background-image: url("../image/s3Icon.png");
+              }
+              .ec2Icon {
+                background-image: url("../image/ec2Icon.png");
+              }
+              .rdsIcon {
+                background-image: url("../image/rdsIcon.png");
+              }
             }
           }
         }
