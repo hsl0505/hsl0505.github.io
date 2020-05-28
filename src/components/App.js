@@ -10,6 +10,9 @@ function App() {
   const [aboutTitleText, setAboutTitleText] = useState(false);
   const [aboutTitleUnder, setAboutTitleUnder] = useState(false);
   const [aboutIcon, setAboutIcon] = useState(false);
+  const [aboutMyImg, setMyImg] = useState(false);
+  const [aboutMyText, setMyText] = useState(false);
+  // const [aboutSkillTitle, setSkillTitle] = useState(false);
 
   function onScroll() {
     console.log(document.documentElement.scrollTop);
@@ -24,6 +27,14 @@ function App() {
 
     if (!aboutIcon && document.documentElement.scrollTop > 630) {
       setAboutIcon(true);
+    }
+
+    if (!aboutMyImg && document.documentElement.scrollTop > 1000) {
+      setMyImg(true);
+    }
+
+    if (!aboutMyText && document.documentElement.scrollTop > 1012) {
+      setMyText(true);
     }
 
     if (document.documentElement.scrollTop > 1004) {
@@ -65,6 +76,8 @@ function App() {
             aboutTitleText={aboutTitleText}
             aboutTitleUnder={aboutTitleUnder}
             aboutIcon={aboutIcon}
+            aboutMyImg={aboutMyImg}
+            aboutMyText={aboutMyText}
           />
         </section>
         <section className="project">플젝</section>
