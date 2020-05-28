@@ -26,7 +26,6 @@
     .About_myVision {
       display: flex;
       justify-content: center;
-
       .myVision1,
       .myVision2 {
         display: flex;
@@ -71,15 +70,20 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
         img {
           width: 250px;
           height: 250px;
           border-radius: 125px;
+          display: none;
+          animation: myImgMove 1s forwards;
         }
         .explainText {
+          display: none;
           margin-top: 20px;
           text-align: center;
           line-height: 35px;
+          animation: myTextMove 1s forwards;
           .explainText_title {
             font-size: 30px;
             font-weight: bold;
@@ -89,121 +93,227 @@
               color: #0b615e;
             }
           }
-          .explainText_close {
-            margin-top: 15px;
-            font-weight: bold;
-            font-size: 20px;
-            text-align: center;
-          }
         }
       }
 
       .mySkills {
-        width: 40%;
-        // background-color: red;
-        .bestSkills,
-        .experienceSkills {
-          .bestSkills_title,
-          .experienceSkills_title {
-            font-size: 25px;
+        width: 45%;
+        margin-right: 5%;
+
+        .mySkills_title {
+          text-align: center;
+          font-size: 40px;
+          font-weight: bold;
+          display: none;
+          animation: skillTitleMove 1s forwards;
+        }
+        .mySkills_content {
+          height: 100%;
+          background-color: #f8fbef;
+          border-radius: 40%;
+          padding-right: 20px;
+          margin-left: 40px;
+          margin-top: 20px;
+          display: none;
+          grid-template-columns: repeat(12, 1fr);
+          grid-template-rows: repeat(10, 10%);
+          .item {
+            animation: skillContent 1s forwards;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-weight: bold;
-            margin-bottom: 20px;
             span {
-              color: #0b615e;
+              cursor: pointer;
+              position: relative;
+            }
+            span:hover {
+              transform: scale(1.5);
+              .html_tooltip,
+              .css_tooltip,
+              .js_tooltip,
+              .redux_tooltip,
+              .react_tooltip,
+              .node_tooltip,
+              .sql_tooltip,
+              .seq_tooltip,
+              .aws_tooltip,
+              .rn_tooltip {
+                display: block;
+                width: 500px;
+                height: 80px;
+                position: absolute;
+                top: -65px;
+                left: -210px;
+                transform: scale(0.5);
+                background-color: #0b615e;
+                color: white;
+                font-weight: normal;
+                border-radius: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+              }
+              .css_tooltip {
+                width: 300px;
+                left: -124px;
+              }
+              .js_tooltip {
+                width: 550px;
+                left: -170px;
+              }
+              .redux_tooltip {
+                width: 400px;
+                left: -175px;
+                top: -70px;
+              }
+              .react_tooltip {
+                width: 550px;
+                left: -200px;
+                top: -55px;
+              }
+              .node_tooltip {
+                width: 500px;
+                height: 100px;
+                top: -85px;
+                left: -210px;
+                line-height: 40px;
+              }
+              .sql_tooltip {
+                width: 350px;
+                left: -150px;
+                top: -70px;
+              }
+              .seq_tooltip {
+                width: 350px;
+                left: -140px;
+              }
+              .aws_tooltip {
+                width: 450px;
+                top: -70px;
+              }
+              .rn_tooltip {
+                left: -160px;
+              }
+              .html_tooltip::after,
+              .css_tooltip::after,
+              .js_tooltip::after,
+              .redux_tooltip::after,
+              .react_tooltip::after,
+              .node_tooltip::after,
+              .sql_tooltip::after,
+              .seq_tooltip::after,
+              .aws_tooltip::after,
+              .rn_tooltip::after {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                margin-left: -10px;
+                border: solid transparent;
+                border-color: rgba(51, 51, 51, 0);
+                border-top-color: #0b615e;
+                border-width: 15px;
+                pointer-events: none;
+                content: " ";
+              }
             }
           }
-          .bestSkills_icon,
-          .experienceSkills_icon {
-            display: flex;
-            .icon_wrapper {
-              width: 100px;
-              .htmlIcon,
-              .cssIcon,
-              .jsIcon,
-              .tsIcon,
-              .reactIcon,
-              .expoIcon,
-              .nodeIcon,
-              .expressIcon,
-              .gitIcon,
-              .mysqlIcon,
-              .seqIcon,
-              .s3Icon,
-              .ec2Icon,
-              .rdsIcon {
-                width: 100px;
-                height: 100px;
-                background-image: url("../image/htmlIcon.png");
-                background-size: cover;
-                text-align: center;
-                line-height: 100px;
-              }
-              .cssIcon {
-                margin-top: 7px;
-                margin-bottom: 3px;
-                margin-left: 5px;
-                background-image: url("../image//cssIcon.png");
-                width: 90px;
-                height: 90px;
-              }
-              .jsIcon {
-                background-image: url("../image/jsIcon.png");
-                background-position: center;
-                height: 78px;
-                width: 78px;
-                margin-top: 12px;
-                margin-bottom: 10px;
-                margin-left: 11px;
-              }
-              .tsIcon {
-                background-image: url("../image/tsIcon.png");
-                background-position: center;
-                height: 84px;
-                width: 90px;
-                margin-top: 10px;
-                margin-left: 5px;
-                margin-bottom: 6px;
-              }
-              .reactIcon {
-                background-image: url("../image/reactIcon.png");
-              }
-              .expoIcon {
-                background-image: url("../image/expoIcon.png");
-                background-size: contain;
-                background-repeat: no-repeat;
-                height: 70px;
-                width: 88px;
-                margin-top: 18px;
-                margin-left: 12px;
-                margin-bottom: 12px;
-              }
-              .nodeIcon {
-                background-image: url("../image/nodeIcon.png");
-              }
-              .expressIcon {
-                background-image: url("../image/expressIcon.png");
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-              }
-              .gitIcon {
-                background-image: url("../image/gitIcon.png");
-              }
-              .mysqlIcon {
-                background-image: url("../image/mysqlIcon.png");
-              }
-              .seqIcon {
-                background-image: url("../image/sequelizeIcon.png");
-              }
-              .s3Icon {
-                background-image: url("../image/s3Icon.png");
-              }
-              .ec2Icon {
-                background-image: url("../image/ec2Icon.png");
-              }
-              .rdsIcon {
-                background-image: url("../image/rdsIcon.png");
-              }
+
+          .item:nth-child(1) {
+            grid-column: 2/6;
+            grid-row: 2/5;
+            color: red;
+            font-size: 30px;
+            .html_tooltip {
+              display: none;
+            }
+          }
+          .item:nth-child(2) {
+            grid-column: 5/9;
+            grid-row: 1/5;
+            color: #0040ff;
+            font-size: 30px;
+            .css_tooltip {
+              display: none;
+            }
+          }
+          .item:nth-child(3) {
+            grid-column: 8/13;
+            grid-row: 2/5;
+            color: #ffbf00;
+            font-size: 45px;
+            .js_tooltip {
+              display: none;
+            }
+          }
+          .item:nth-child(4) {
+            grid-column: 2/5;
+            grid-row: 5/7;
+            color: purple;
+            font-size: 18px;
+            .redux_tooltip {
+              display: none;
+            }
+          }
+          .item:nth-child(5) {
+            grid-column: 5/9;
+            grid-row: 4/8;
+            font-size: 55px;
+            color: #0489b1;
+            .react_tooltip {
+              display: none;
+            }
+          }
+          .item:nth-child(6) {
+            grid-column: 9/12;
+            grid-row: 5/7;
+            font-size: 25px;
+            color: #0174df;
+          }
+          .item:nth-child(7) {
+            grid-column: 3/6;
+            grid-row: 7/9;
+            font-size: 25px;
+            color: #04b404;
+            .node_tooltip {
+              display: none;
+            }
+          }
+          .item:nth-child(8) {
+            grid-column: 5/9;
+            grid-row: 7/10;
+            color: #58acfa;
+            font-size: 18px;
+            .sql_tooltip {
+              display: none;
+            }
+          }
+          .item:nth-child(9) {
+            grid-column: 8/13;
+            grid-row: 7/9;
+            color: #2e9afe;
+            .seq_tooltip {
+              display: none;
+            }
+          }
+          .item:nth-child(10) {
+            grid-column: 3/7;
+            grid-row: 9/10;
+            color: #ffbf00;
+            .aws_tooltip {
+              display: none;
+            }
+          }
+          .item:nth-child(11) {
+            grid-column: 7/12;
+            grid-row: 8/13;
+            font-size: 30px;
+            color: #4000ff;
+            .rn_tooltip {
+              display: none;
             }
           }
         }
@@ -240,5 +350,49 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes myImgMove {
+  from {
+    opacity: 0;
+    transform: translateX(-1000px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes myTextMove {
+  from {
+    opacity: 0;
+    transform: translateX(-1000px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes skillTitleMove {
+  from {
+    opacity: 0;
+    transform: translateX(1000px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes skillContent {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
