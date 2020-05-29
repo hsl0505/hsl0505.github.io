@@ -1,0 +1,85 @@
+.section_project {
+  height: 150%;
+  background-color: #f2f2f2;
+  .Project_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title_text {
+      font-family: "Jua", sans-serif;
+      font-size: 3rem;
+      margin-top: 3%;
+      // animation: moveAbout 1s forwards;
+      // display: none;
+    }
+    .title_underline {
+      margin-top: 10px;
+      width: 3rem;
+      border-bottom: 3px solid black;
+      // animation: moveAbout 1s forwards;
+      // display: none;
+    }
+  }
+
+  .Project_content {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    margin-left: 18%;
+    margin-right: 12%;
+
+    ul {
+      .first,
+      .second {
+        display: flex;
+        background-color: white;
+        padding: 25px;
+        margin-top: 50px;
+        .firstimg,
+        .secondimg {
+          width: 300px;
+          height: 300px;
+          border-radius: 10px;
+          background-image: url("../image/pfproject.png");
+          background-size: cover;
+          background-position: center;
+        }
+        .secondimg {
+          width: 200px;
+          height: 200px;
+          margin: 50px;
+          background-image: url("../image/billyzip.png");
+        }
+        .explain {
+          width: 65%;
+          margin-left: 40px;
+          line-height: 30px;
+          .explain_title {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 30px;
+            color: #0b615e;
+          }
+          a {
+            display: inline-block;
+            color: black;
+          }
+          a:hover {
+            transform: scale(1.1);
+          }
+          .icons {
+            display: flex;
+            justify-content: space-between;
+            width: 70px;
+            margin-top: 20px;
+            i {
+              color: #0b615e;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
