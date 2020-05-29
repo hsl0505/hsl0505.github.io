@@ -3,6 +3,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import Home from "./Home";
 import Navigation from "./Navigation";
 import About from "./About";
+import Project from "./Project";
 
 function App() {
   const [showNav, setNav] = useState();
@@ -12,7 +13,8 @@ function App() {
   const [aboutIcon, setAboutIcon] = useState(false);
   const [aboutMyImg, setMyImg] = useState(false);
   const [aboutMyText, setMyText] = useState(false);
-  // const [aboutSkillTitle, setSkillTitle] = useState(false);
+  const [aboutMySkillText, setMySkillText] = useState(false);
+  const [aboutMySkillContent, setMySkillContent] = useState(false);
 
   function onScroll() {
     console.log(document.documentElement.scrollTop);
@@ -33,11 +35,42 @@ function App() {
       setMyImg(true);
     }
 
-    if (!aboutMyText && document.documentElement.scrollTop > 1012) {
+    if (!aboutMyText && document.documentElement.scrollTop > 1007) {
       setMyText(true);
     }
 
-    if (document.documentElement.scrollTop > 1004) {
+    if (
+      !aboutMySkillText &&
+      window.innerWidth >= 1024 &&
+      document.documentElement.scrollTop > 1000
+    ) {
+      setMySkillText(true);
+    } else if (
+      !aboutMySkillText &&
+      window.innerWidth < 1024 &&
+      document.documentElement.scrollTop > 1220
+    ) {
+      setMySkillText(true);
+    }
+
+    if (
+      !aboutMySkillContent &&
+      window.innerWidth >= 1024 &&
+      document.documentElement.scrollTop > 1007
+    ) {
+      setMySkillContent(true);
+    } else if (
+      !aboutMySkillContent &&
+      window.innerWidth < 1024 &&
+      document.documentElement.scrollTop > 1470
+    ) {
+      setMySkillContent(true);
+    }
+
+    if (
+      document.documentElement.scrollTop >
+      window.innerHeight + window.innerHeight * 0.062
+    ) {
       setNav(true);
     } else {
       setNav(false);
@@ -78,9 +111,13 @@ function App() {
             aboutIcon={aboutIcon}
             aboutMyImg={aboutMyImg}
             aboutMyText={aboutMyText}
+            aboutMySkillText={aboutMySkillText}
+            aboutMySkillContent={aboutMySkillContent}
           />
         </section>
-        <section className="project">플젝</section>
+        <section className="section_project">
+          <Project />
+        </section>
       </main>
     </Fragment>
   );
