@@ -13,7 +13,11 @@ function Home() {
         <div
           className="Home_btn"
           onClick={() =>
-            window.scrollTo({ top: 1008, left: 0, behavior: "smooth" })
+            window.scrollTo({
+              top: window.innerHeight + window.innerHeight * 0.065,
+              left: 0,
+              behavior: "smooth",
+            })
           }
         >
           <div>VIEW</div>
