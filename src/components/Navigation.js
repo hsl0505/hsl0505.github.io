@@ -32,7 +32,9 @@ export default function Navigation() {
         </li>
         <li
           className={curLocation === "about" ? "curLocation" : ""}
-          onClick={() => moveScroll(1006, 0)}
+          onClick={() =>
+            moveScroll(window.innerHeight + window.innerHeight * 0.065, 0)
+          }
         >
           ABOUT
         </li>
