@@ -8,6 +8,8 @@ export default function About(props) {
     aboutIcon,
     aboutMyImg,
     aboutMyText,
+    aboutMySkillText,
+    aboutMySkillContent,
   } = props;
 
   return (
@@ -73,101 +75,77 @@ export default function About(props) {
               <div className="explainText_title">
                 반갑습니다 ! 저는 <span>임현성</span>입니다.
               </div>
-              저는 2019년 11월, Codestates라는 부트캠프에서 Advanced Software
-              Engineering Immersive Program
+              새로운 것을 배우는 걸 좋아하고, 성취감과 보람을 느끼는 일을
+              좋아합니다. {window.innerWidth <= 1279 ? <br /> : ""}
+              Codestates라는 코딩 부트캠프에서
+              {window.innerWidth > 1279 ? <br /> : " "}
+              Advanced Software Engineering Immersive Program
+              {window.innerWidth <= 1023 ? <br /> : " "}교육을 시작으로 개발
+              공부를 시작하였습니다. <br />
+              현재는 React를 비롯한 프론트엔드 기술에 매력을 느껴 프론트엔드
+              개발자가 되기 위해 노력중입니다. <br />
+              저는 항상 성장하고 같이 일하고 싶은 개발자가 되고 싶습니다.
               <br />
-              교육을 시작으로 개발 공부를 시작하였습니다. 현재는 React를 비롯한
-              프론트엔드 기술에 매력을 느껴
-              <br />
-              프론트엔드 개발자가 되기 위해 노력중입니다. 저는 항상 성장하고
-              같이 일하고 싶은 개발자가 되고 싶습니다.
-              <br />
+              <div style={{ fontWeight: "bold", textAlign: "center" }}>
+                저의 포트폴리오를 봐주셔서 감사합니다 :)
+              </div>
             </div>
           </div>
           <div className="mySkills">
             <div
               className="mySkills_title"
-              style={aboutMyImg ? { display: "block" } : {}}
+              style={aboutMySkillText ? { display: "block" } : {}}
             >
               SKILL SET
             </div>
-            <div
-              className="mySkills_content"
-              style={aboutMyText ? { display: "grid" } : {}}
-            >
-              <div className="item">
-                <span>
-                  HTML
-                  <span className="html_tooltip">HTML5, Semantic HTML</span>
-                </span>
-              </div>
-              <div className="item">
-                <span>
-                  CSS<span className="css_tooltip">CSS3, SCSS</span>
-                </span>
-              </div>
-              <div className="item">
-                <span>
-                  JavaScript
-                  <span className="js_tooltip">
-                    ES2015(ES6), ES2017(ES8), DOM
-                  </span>
-                </span>
-              </div>
-              <div className="item">
-                <span>
-                  Redux
-                  <span className="redux_tooltip">
-                    현재 학습중인 기술입니다 :)
-                  </span>
-                </span>
-              </div>
-              <div className="item">
-                <span>
-                  React
-                  <span className="react_tooltip">
-                    React, React Hooks, React-Router
-                  </span>
-                </span>
-              </div>
-              <div className="item">
-                <span>TypeScript</span>
-              </div>
-              <div className="item">
-                <span>
-                  NodeJS
-                  <span className="node_tooltip">
-                    Express를 이용한 서버 구축,
-                    <br />
-                    REST API 구축 경험
-                  </span>
-                </span>
-              </div>
-              <div className="item">
-                <span>
-                  MySQL
-                  <span className="sql_tooltip">RDBS 설계 경험</span>
-                </span>
-              </div>
-              <div className="item">
-                <span>
-                  Sequelize
-                  <span className="seq_tooltip">Sequelize CLI</span>
-                </span>
-              </div>
-              <div className="item">
-                <span>
-                  AWS
-                  <span className="aws_tooltip">S3, EC2, RDS 사용 경험</span>
-                </span>
-              </div>
-              <div className="item">
-                <span>
-                  React-Native
-                  <span className="rn_tooltip">RN(EXPO), React-Navigation</span>
-                </span>
-              </div>
-            </div>
+            <table style={aboutMySkillContent ? { display: "block" } : {}}>
+              <tbody>
+                <tr>
+                  <th>HTML</th>
+                  <td>HTML5, Semantic HTML</td>
+                </tr>
+                <tr>
+                  <th>CSS</th>
+                  <td>CSS3, SCSS</td>
+                </tr>
+                <tr>
+                  <th>JavaScript</th>
+                  <td>ES 2015(ES6)+, DOM</td>
+                </tr>
+                <tr>
+                  <th>React</th>
+                  <td>React, React Hooks, React-Router</td>
+                </tr>
+                <tr>
+                  <th>TypeScript</th>
+                  <td>TypeScript 프로젝트 경험</td>
+                </tr>
+                <tr>
+                  <th>Redux</th>
+                  <td>현재 학습중입니다 :)</td>
+                </tr>
+                <tr>
+                  <th>ReactNative</th>
+                  <td>RN(EXPO), React-Navigation</td>
+                </tr>
+                <tr>
+                  <th>Node.js</th>
+                  <td>Express로 서버 구축, REST API 구축 경험</td>
+                </tr>
+                <tr>
+                  <th>MySQL</th>
+                  <td>SQL 사용, RDBS 설계 경험</td>
+                </tr>
+                <tr>
+                  <th>Sequelize</th>
+                  <td>Sequelize CLI 사용 경험</td>
+                </tr>
+                <tr>
+                  <th>AWS</th>
+                  <td>S3, EC2, RDS 사용 경험</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
