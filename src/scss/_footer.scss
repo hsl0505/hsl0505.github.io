@@ -1,0 +1,41 @@
+footer {
+  background-color: #0b615e;
+  height: 48%;
+  .Contact_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title_text {
+      font-family: "Jua", sans-serif;
+      font-size: 3rem;
+      margin-top: 3%;
+      color: white;
+      // animation: moveAbout 1s forwards;
+      // display: none;
+    }
+    .title_underline {
+      margin-top: 10px;
+      width: 3rem;
+      border-bottom: 3px solid white;
+      // animation: moveAbout 1s forwards;
+      // display: none;
+    }
+  }
+
+  .Contact_list {
+    margin-top: 30px;
+    // width: 30%;
+    display: flex;
+    align-items: center;
+    li {
+      display: flex;
+      align-items: center;
+      i {
+        color: white;
+      }
+      span {
+        color: white;
+      }
+    }
+  }
+}

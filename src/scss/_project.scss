@@ -1,5 +1,6 @@
 .section_project {
-  height: 150%;
+  // 155%
+  height: 54.3859649%;
   background-color: #f2f2f2;
   .Project_title {
     display: flex;
@@ -31,13 +32,15 @@
 
     ul {
       .first,
-      .second {
+      .second,
+      .third {
         display: flex;
         background-color: white;
         padding: 25px;
         margin-top: 50px;
         .firstimg,
-        .secondimg {
+        .secondimg,
+        .thirdimg {
           width: 300px;
           height: 300px;
           border-radius: 10px;
@@ -50,6 +53,14 @@
           height: 200px;
           margin: 50px;
           background-image: url("../image/billyzip.png");
+        }
+        .thirdimg {
+          background-image: url("../image/sobucket.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 250px;
+          height: 250px;
+          margin: 25px;
         }
         .explain {
           width: 65%;
