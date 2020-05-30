@@ -4,6 +4,7 @@ import Home from "./Home";
 import Navigation from "./Navigation";
 import About from "./About";
 import Project from "./Project";
+import Contact from "./Contact";
 
 function App() {
   const [showNav, setNav] = useState();
@@ -119,6 +120,9 @@ function App() {
           <Project />
         </section>
       </main>
+      <footer>
+        <Contact />
+      </footer>
     </Fragment>
   );
 }
