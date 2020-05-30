@@ -49,7 +49,7 @@ export default function Project() {
                   href="https://github.com/hsl0505/hsl0505.github.io"
                   target="blank"
                 >
-                  <i class="fab fa-github fa-2x"></i>
+                  <i className="fab fa-github fa-2x"></i>
                 </a>
               </div>
             </div>
@@ -96,7 +96,48 @@ export default function Project() {
                   href="https://github.com/hsl0505/BillyZip_CLIENT"
                   target="blank"
                 >
-                  <i class="fab fa-github fa-2x"></i>
+                  <i className="fab fa-github fa-2x"></i>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li className="third">
+            <div className="thirdimg" />
+            <div className="explain">
+              <div className="explain_title">SO Bucket 프로젝트</div>
+              <br />
+              <div>
+                'Spread Out Bucket'의 줄임말로 자신의 버킷리스트를 관리하고
+                공유서비스를 제공하는 웹 프로젝트 입니다. <br />팀 프로젝트로 총
+                2주동안 진행하였습니다. 저는 풀스택 포지션을 맡았었습니다.
+                <br />
+                프로젝트의 자세한 설명은 하단의 블로깅에 있습니다 :)
+              </div>
+              <br />
+              <div>
+                <span style={{ fontWeight: "bold", color: "#0b615e" }}>
+                  기술스택
+                </span>{" "}
+                : React, React-Router, AntDesign, Node(express), MySQL,
+                Sequelize(CLI), JWT
+              </div>
+              <span style={{ fontWeight: "bold", color: "#0b615e" }}>
+                # 프로젝트 블로깅
+              </span>{" "}
+              :{" "}
+              <a
+                href="https://hsl1697.tistory.com/75?category=383752"
+                target="blank"
+              >
+                블로그 보러가기
+              </a>
+              <div className="icons">
+                <a
+                  href="https://github.com/hsl0505/SOBucket_client"
+                  target="blank"
+                >
+                  <i className="fab fa-github fa-2x"></i>
                 </a>
               </div>
             </div>
