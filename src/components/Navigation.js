@@ -6,10 +6,29 @@ export default function Navigation() {
   const [curLocation, setCurLocation] = useState("home");
 
   function setCurLocationFunc() {
-    if (document.documentElement.scrollTop < 1004) {
+    if (
+      document.documentElement.scrollTop <=
+      window.innerHeight + window.innerHeight * 0.06
+    ) {
       setCurLocation("home");
-    } else if (document.documentElement.scrollTop > 1004) {
+    } else if (
+      document.documentElement.scrollTop > window.innerHeight &&
+      document.documentElement.scrollTop <=
+        window.innerHeight * 2.3 - window.innerHeight * 0.06
+    ) {
       setCurLocation("about");
+    } else if (
+      document.documentElement.scrollTop >
+        window.innerHeight * 2.3 - window.innerHeight * 0.06 &&
+      document.documentElement.scrollTop <=
+        window.innerHeight * 3.85 - window.innerHeight * 0.6
+    ) {
+      setCurLocation("project");
+    } else if (
+      document.documentElement.scrollTop >
+      window.innerHeight * 3.85 - window.innerHeight * 0.6
+    ) {
+      setCurLocation("contact");
     }
   }
 
@@ -38,8 +57,22 @@ export default function Navigation() {
         >
           ABOUT
         </li>
-        <li>PROJECT</li>
-        <li>CONTACT</li>
+        <li
+          className={curLocation === "project" ? "curLocation" : ""}
+          onClick={() =>
+            moveScroll(window.innerHeight * 2.3 - window.innerHeight * 0.06, 0)
+          }
+        >
+          PROJECT
+        </li>
+        <li
+          className={curLocation === "contact" ? "curLocation" : ""}
+          onClick={() =>
+            moveScroll(window.innerHeight * 3.85 - window.innerHeight * 0.5, 0)
+          }
+        >
+          CONTACT
+        </li>
         <i
           className="fas fa-bars fa-2x"
           onClick={() => {
