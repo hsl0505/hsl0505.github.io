@@ -14,7 +14,7 @@ function Home() {
           className="Home_btn"
           onClick={() =>
             window.scrollTo({
-              top: window.innerHeight + window.innerHeight * 0.065,
+              top: window.innerHeight + window.innerHeight * 0.07,
               left: 0,
               behavior: "smooth",
             })
