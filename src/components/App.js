@@ -5,9 +5,11 @@ import Navigation from "./Navigation";
 import About from "./About";
 import Project from "./Project";
 import Contact from "./Contact";
+import Loading from "./Loading";
 
 function App() {
   const [showNav, setNav] = useState();
+  const [isLoading, setLoading] = useState(false);
 
   const [aboutTitleText, setAboutTitleText] = useState(false);
   const [aboutTitleUnder, setAboutTitleUnder] = useState(false);
@@ -18,7 +20,7 @@ function App() {
   const [aboutMySkillContent, setMySkillContent] = useState(false);
 
   function onScroll() {
-    console.log(document.documentElement.scrollTop);
+    // console.log(document.documentElement.scrollTop);
 
     if (!aboutTitleText && document.documentElement.scrollTop > 400) {
       setAboutTitleText(true);
@@ -82,8 +84,15 @@ function App() {
     window.addEventListener("scroll", onScroll);
   }, [showNav]);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(true);
+    }, 1000);
+  }, []);
+
   return (
     <Fragment>
+      {!isLoading ? <Loading /> : <Fragment />}
       <header>
         <Home />
       </header>
