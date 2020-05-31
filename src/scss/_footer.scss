@@ -24,18 +24,44 @@ footer {
 
   .Contact_list {
     margin-top: 30px;
-    // width: 30%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    li {
+    margin-left: 50px;
+    ul {
+      margin-top: 30px;
       display: flex;
-      align-items: center;
-      i {
-        color: white;
+      li {
+        width: 350px;
+        display: flex;
+        align-items: center;
+
+        i {
+          text-align: center;
+          color: white;
+          width: 70px;
+        }
+        span {
+          color: white;
+          font-size: 18px;
+          a {
+            text-decoration: none;
+            color: white;
+          }
+        }
       }
-      span {
-        color: white;
+      .secondIcon {
+        margin-left: 80px;
       }
+    }
+  }
+  .copyright_text {
+    margin-top: 80px;
+    text-align: center;
+    color: #1c1c1c;
+    font-weight: bold;
+    span {
+      color: #fe2e64;
     }
   }
 }
